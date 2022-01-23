@@ -1,6 +1,6 @@
-# flutter_breakout_game
+# breakout-game
 
-A new Flutter project.
+![output](https://user-images.githubusercontent.com/18514782/150683500-f9e8f4af-1601-4705-8c55-1b8fefa19961.gif)
 
 ## Getting Started
 
