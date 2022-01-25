@@ -10,7 +10,7 @@ class InitialView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
-          onPressed: () => gameLoop.overlays.remove('pause'),
+          onPressed: () => gameLoop.overlays.remove('initial'),
           child: const Text('Start')),
     );
   }

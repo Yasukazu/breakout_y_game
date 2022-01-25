@@ -30,13 +30,13 @@ class GameLoopWidget extends StatelessWidget {
             child: CircularProgressIndicator(),
           ),
           overlayBuilderMap: {
-            'pause': (context, GameLoop gameLoop) => InitialView(
+            'initial': (context, GameLoop gameLoop) => InitialView(
                   gameLoop: gameLoop,
                 ),
             'gameover': (context, GameLoop gameLoop) =>
                 GameOverView(gameLoop: gameLoop),
           },
-          initialActiveOverlays: const ['pause'],
+          initialActiveOverlays: const ['initial'],
         ),
       ),
     );
@@ -52,7 +52,7 @@ class GameLoop extends FlameGame
   GameLoop(this.gameLoopState) : super();
 
   void onOverlayChanged() {
-    if (overlays.isActive('pause')) {
+    if (overlays.isActive('initial')) {
       pauseEngine();
     } else {
       resumeEngine();
