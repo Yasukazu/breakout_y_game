@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_breakout_game/ball.dart';
 import 'package:flutter_breakout_game/block.dart';
 import 'package:flutter_breakout_game/gameover_view.dart';
+import 'package:flutter_breakout_game/initial_view.dart';
 import 'package:flutter_breakout_game/paddle.dart';
-import 'package:flutter_breakout_game/pause_view.dart';
 
 // overlay周りの設定で参考にした
 // https://github.com/flame-engine/flame/blob/main/examples/lib/stories/system/overlays_example.dart
@@ -30,7 +30,7 @@ class GameLoopWidget extends StatelessWidget {
             child: CircularProgressIndicator(),
           ),
           overlayBuilderMap: {
-            'pause': (context, GameLoop gameLoop) => PauseView(
+            'pause': (context, GameLoop gameLoop) => InitialView(
                   gameLoop: gameLoop,
                 ),
             'gameover': (context, GameLoop gameLoop) =>
@@ -46,7 +46,7 @@ class GameLoopWidget extends StatelessWidget {
 class GameLoop extends FlameGame
     with HasCollidables, HasKeyboardHandlerComponents {
   static const blockColCount = 6;
-  static const blockRowCount = 5;
+  static const blockRowCount = 2;
   final GameLoopState gameLoopState;
 
   GameLoop(this.gameLoopState) : super();
