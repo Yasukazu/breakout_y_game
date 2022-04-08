@@ -1,4 +1,5 @@
-# breakout-game
+# breakout-y-game
+ - [Qiita: Flutterでゲーム作り入門](https://qiita.com/kawamou/items/dc940961186c1c2f1571)
 
 ![output](https://user-images.githubusercontent.com/18514782/150683500-f9e8f4af-1601-4705-8c55-1b8fefa19961.gif)
 
